@@ -32,7 +32,7 @@ function authorsReducer (state = [], action) {
       return [...state, action.author]
     case 'ADD_BOOK':
       let existingAuthor = state.filter(
-        author => author.authorName === author.book.authorName
+        author => author.authorName === action.book.authorName
       )
       if (existingAuthor.length > 0) {
         return state
